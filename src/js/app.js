@@ -1,34 +1,28 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 
+import 'whatwg-fetch';
+
 import '../css/style.css';
 
 import keenImage from '../assets/keen.png';
 
 import { getServiceData } from './service';
 
-import 'whatwg-fetch';
-
-console.log( getServiceData );
-
-export default class Hello extends Component {
+export default class AmazonS3 extends Component {
 
 	componentWillMount() {
-		//this.props.
-
-		//debugger;
-
 		getServiceData();
 	}
   
 	render() {
 		return (
 		  <div>
-		    Hello from react
-		    <img src={ keenImage } alt='Commander Keen' />
+		    Amazon
+		    <img src={ keenImage } alt='Amazon' />
 		  </div>
 		);
 	}
 }
 
-render(<Hello />, document.getElementById('app'));
+render(<AmazonS3 />, document.getElementById('app'));
